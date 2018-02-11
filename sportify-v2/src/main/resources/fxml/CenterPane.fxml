@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane id="centerPane" fx:id="centerScrollPane" hbarPolicy="NEVER" stylesheets="@../css/centerPane.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.CenterPaneController">
+   <content>
+      <AnchorPane fx:id="centerAnchorPane">
+			<TabPane id="centerTabPane" fx:id="centerTabPane" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+			  <tabs>
+			     <Tab text="FIXTURES">
+			        <content>
+			        		<fx:include fx:id="fixtureTab" source="center/FixtureTab.fxml" />	
+			        </content>
+			     </Tab>
+			     <Tab text="TEAM INFORMATION">
+			        <content>
+			        		<fx:include fx:id="teamTab" source="center/TeamTab.fxml" />	
+			        </content>
+			      </Tab>
+			    	<Tab text="LEAGUE INFORMATION">
+			      	<content>
+			        		<fx:include fx:id="leagueTab" source="center/LeagueTab.fxml" />	
+			        	</content>
+			     </Tab>
+			  </tabs>
+			</TabPane>      			
+      </AnchorPane>
+   </content>
+</ScrollPane>

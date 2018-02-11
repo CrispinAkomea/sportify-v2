@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="entirePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="230.0" styleClass="open-note" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.component.OpenNotePaneController">
+   <children>
+      <ImageView fx:id="noteImageView" fitHeight="34.0" fitWidth="34.0" layoutX="20.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="70.0" layoutY="22.0" text="Add Notes">
+         <font>
+            <Font name="System Font" size="13.0" />
+         </font>
+      </Label>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

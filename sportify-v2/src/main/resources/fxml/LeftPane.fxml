@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+
+<SplitPane dividerPositions="0.5" maxWidth="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefWidth="230.0" stylesheets="@../css/leftPane.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.LeftPaneController">
+   <items>
+      <ScrollPane id="leftPane" hbarPolicy="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="230.0" stylesheets="@../css/leftPane.css">
+         <content>
+            <SplitPane dividerPositions="0.5" maxWidth="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefWidth="217.0">
+               <items>
+                  <fx:include fx:id="leagueListView" source="left/LeagueListView.fxml" />
+                  <fx:include fx:id="teamAccordin" source="left/TeamAccordin.fxml" />
+               </items>
+            </SplitPane>
+         </content>
+      </ScrollPane>
+      <fx:include fx:id="openNotePane" source="left/OpenNotePane.fxml" />
+   </items>
+</SplitPane>

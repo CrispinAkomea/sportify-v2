@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" strict="true">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+     		<PatternLayout pattern="%d{MM-dd-YYYY HH:mm} [%t] %-5level %F (%L) - %msg%n"/>
+    		</Console>
+    		<File name="File" fileName="./log/log.log">
+    			<ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+    			<PatternLayout pattern="%d{MM-dd-YYYY HH:mm} [%t] %-5level %F (%L) - %msg%n"/>
+    		</File>
+	</Appenders>
+	<Loggers>
+     	<Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
+        </Root>
+	</Loggers>
+</Configuration>

@@ -1,0 +1,113 @@
+/****************************************   Skin   ****************************************/
+
+* {
+    -default-background-color: #121212;
+    -default-font-color: #b3b3b3;
+    -default-button-color: #161616;
+
+    -textfield-font-color: #4c4c4c;
+    -menu-background-color: #393939;
+}
+
+#topPane .viewport,
+#topPane .anchor-pane {
+    -fx-background-color: -default-background-color;
+}
+
+/********************  Textfield  ********************/
+
+#topPane .text-field {
+    -fx-prompt-text-fill: -textfield-font-color;
+}
+
+.text-field:focused {
+    -fx-focus-color: transparent;
+}
+
+#topPane .text-field .text {
+    -fx-text-fill: black;
+}
+
+/********************   Button   ********************/
+
+.button {
+    -fx-border-color: white;
+    -fx-text-fill: white;
+    -fx-background-color: -default-button-color;
+}
+
+/********************    Menu    ********************/
+
+.split-menu-button {
+    -fx-background-color: transparent;
+}
+
+.split-menu-button .label {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+}
+
+.split-menu-button .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.split-menu-button .arrow {
+    -fx-background-color: white;
+}
+
+.split-menu-button .menu-item .label {
+    -fx-text-fill: -default-font-color;
+}
+
+.split-menu-button .menu-item:focused {
+    -fx-background-color: -menu-background-color;
+}
+
+.split-menu-button .menu-item:focused .label {
+    -fx-text-fill: white;
+}
+
+.split-menu-button .context-menu {
+    -fx-background-color: -menu-background-color;
+}
+
+/****************************************  Layout  ****************************************/
+
+#topPane,
+#topPane .viewport,
+#topPane .anchor-pane {
+    -fx-padding: 0;
+}
+
+/********************  Textfield  ********************/
+
+#topPane .text-field {
+    -fx-background-radius: 25;
+}
+
+/********************   Button   ********************/
+
+.button {
+    -fx-font-size: 12px;
+    -fx-padding: 3 20;
+    -fx-border-width: 1;
+    -fx-border-radius: 25;
+    -fx-background-radius: 25;
+}
+
+.button:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+}
+
+/********************    Menu    ********************/
+
+.split-menu-button .menu-item .label {
+    -fx-padding: 2 100 2 5;
+}
+
+.split-menu-button .context-menu {
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+}

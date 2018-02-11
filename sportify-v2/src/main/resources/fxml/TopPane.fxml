@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane id="topPane" dividerPositions="0.29797979797979796, 0.5" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="1230.0" stylesheets="@../css/topPane.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.TopPaneController">
+  <items>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="230.0" styleClass="anchor-pane">
+         <children>
+            <Label layoutX="52.0" layoutY="17.0" text="SPORTIFY" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+         </children></AnchorPane>
+    <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" styleClass="anchor-pane">
+         <children>
+            <TextField fx:id="searchTextField" layoutX="32.0" layoutY="12.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="27.0" promptText="Search" styleClass="text-pane">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="27.0" />
+               </padding>
+            </TextField>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="38.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon/search-20.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="updateButton" layoutX="419.0" layoutY="14.0" mnemonicParsing="false" text="UPDATE" AnchorPane.rightAnchor="205.0" />
+            <SplitMenuButton fx:id="menuButton" layoutX="535.0" layoutY="12.0" mnemonicParsing="false" text="Sportify Menu" AnchorPane.rightAnchor="50.0">
+              <items>
+                <MenuItem fx:id="updateItem" mnemonicParsing="false" text="Update" />
+                <MenuItem fx:id="quitItem" mnemonicParsing="false" text="Quit" />
+              </items>
+            </SplitMenuButton>
+         </children></AnchorPane>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="270.0" styleClass="anchor-pane">
+         <children>
+            <Label text="Crucial Fixtures" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="System Font" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+  </items>
+</SplitPane>

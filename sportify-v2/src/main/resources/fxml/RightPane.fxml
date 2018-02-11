@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+
+<ScrollPane id="rightPane" hbarPolicy="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="270.0" stylesheets="@../css/rightPane.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.RightPaneController">
+   <content>
+      <SplitPane maxWidth="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefWidth="257.0">
+            	<items>
+  			    <fx:include fx:id="fixtureSplitPane" source="right/FixtureSplitPane.fxml" />
+         	</items>
+      </SplitPane>   
+   </content>
+</ScrollPane>

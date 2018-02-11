@@ -1,0 +1,55 @@
+/****************************************   Skin   ****************************************/
+
+* {
+    -default-thumb-color: #e5e5e5;
+}
+
+/********************  Scrollpane  ********************/
+
+.scroll-pane,
+.scroll-pane>.corner,
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: -default-thumb-color;
+}
+
+/**********************  Label  **********************/
+
+.label {
+	-fx-text-fill: white;
+}
+
+/****************************************  Layout  ****************************************/
+
+/********************  Splitpane  ********************/
+
+.split-pane,
+.split-pane>.split-pane-divider {
+    -fx-padding: 0;
+}
+
+/********************  Scrollpane  ********************/
+
+.scroll-pane,
+.scroll-pane>.corner,
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-padding: 0;
+}
+
+.scroll-bar .decrement-button,
+.scroll-bar .increment-button {
+    -fx-scale-x: 0;
+    -fx-padding: 1.25;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-opacity: 0.3;
+    -fx-background-radius: 5em;
+}

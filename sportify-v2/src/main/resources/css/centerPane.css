@@ -1,0 +1,279 @@
+/****************************************   Skin   ****************************************/
+
+* {
+    -alternate-background-color: #181818;
+    -default-hover-lighter: #333333;
+    -default-hover-background: #2e2e2e;
+    -default-hover-darker: #2b2b2b;
+    -default-font-color: #b3b3b3;
+    -default-border-color: #343434;
+    -default-font-selected: #2cca60;
+}
+
+#centerPane>.viewport,
+.scroll-pane,
+.scroll-pane .corner,
+.scroll-bar:vertical,
+.scroll-bar:horizontal,
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+    -fx-background-color: -alternate-background-color;
+}
+
+/********************  Tab Headers  ********************/
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: -alternate-background-color;
+}
+
+.tab-pane>.tab-header-area>.headers-region>.tab {
+    -fx-background-color: -alternate-background-color;
+}
+
+.tab-pane>.tab-header-area>.headers-region>.tab .tab-label {
+    -fx-text-fill: -default-font-color;
+}
+
+.tab-pane>.tab-header-area>.headers-region>.tab:selected {
+    -fx-border-color: -default-font-selected;
+}
+
+.tab-pane>.tab-header-area>.headers-region>.tab:selected .tab-label {
+    -fx-text-fill: white;
+}
+
+.tab-pane>.tab-header-area>.headers-region>.tab:selected .focus-indicator {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+
+/********************  TableView  ********************/
+
+#centerPane .table-view {
+    -fx-background-color: -alternate-background-color;
+}
+
+#centerPane .table-view .column-header,
+#centerPane .table-view .column-header .filler,
+#centerPane .table-view .column-header-background .filler {
+    -fx-background-color: -alternate-background-color;
+}
+
+#centerPane .table-view .column-header .label {
+    -fx-text-fill: -default-font-color;
+}
+
+#centerPane .table-view .table-row-cell:selected #teamColumn {
+    -fx-text-fill: -default-font-selected;
+}
+
+.table-view .table-row-cell:filled,
+.table-view .table-row-cell:empty {
+    -fx-background-color: -alternate-background-color;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -default-hover-lighter;
+}
+
+.table-view:row-selection .table-row-cell:filled:hover {
+    -fx-background-color: -default-hover-background;
+}
+
+.table-view:row-selection .table-row-cell:filled:focused:hover {
+    -fx-background-color: -default-hover-darker;
+}
+
+#centerPane .table-view .table-cell:filled {
+    -fx-border-color: -default-border-color;
+    -fx-text-fill: -default-font-color;
+}
+
+#centerPane .table-view .table-cell:empty {
+    -fx-border-color: transparent;
+}
+
+#centerPane #teamColumn {
+    -fx-text-fill: white;
+}
+
+#centerPane .result .homeTeam,
+#centerPane .result .scoreline,
+#centerPane .result .awayTeam {
+    -fx-text-fill: -default-font-color;
+}
+
+/********************  ComboBox  ********************/
+
+#centerPane .combo-box-base {
+    -fx-background-color: -default-hover-background;
+}
+
+#centerPane .combo-box-base .list-cell {
+    -fx-text-fill: white;
+}
+
+#centerPane .combo-box .arrow {
+    -fx-background-color: white;
+}
+
+#centerPane .combo-box .list-view {
+    -fx-background-color: -alternate-background-color;
+}
+
+#centerPane .combo-box .list-view .list-cell {
+    -fx-text-fill: -default-font-color;
+    -fx-background-color: transparent;
+}
+
+#centerPane .combo-box .list-view .list-cell:hover,
+#centerPane .combo-box .list-view .list-cell:selected {
+    -fx-text-fill: white;
+}
+
+/********************  Form  ********************/
+
+.form-win {
+    -fx-background-color: #05c46b;
+    -fx-text-fill: white;
+}
+
+.form-draw {
+    -fx-background-color: #ffd32a;
+    -fx-text-fill: white;
+}
+
+.form-loss {
+    -fx-background-color: #ff3f34;
+    -fx-text-fill: white;
+}
+
+/****************************************  Layout  ****************************************/
+
+#centerPane,
+#centerPane>.viewport,
+.scroll-pane,
+.scroll-pane .corner,
+.scroll-bar:vertical,
+.scroll-bar:horizontal,
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+    -fx-padding: 0;
+}
+
+
+/********************  Tab Headers  ********************/
+
+.tab-pane .tab-header-area {
+    -fx-padding: 0 0 0 15;
+}
+
+.tab-pane>.tab-header-area>.headers-region>.tab {
+    -fx-padding: 7.5;
+    -fx-background-radius: 0;
+}
+
+.tab-pane>.tab-header-area>.headers-region>.tab:selected {
+    -fx-border-radius: 0;
+    -fx-border-width: 3;
+    -fx-border-style: hidden hidden solid hidden;
+}
+
+/********************  TableView  ********************/
+
+#centerPane .table-view {
+    -fx-padding: 0;
+}
+
+#centerPane .table-view .table-row-cell {
+    -fx-cell-size: 40;
+}
+
+#teamColumn .label {
+    -fx-alignment: CENTER-LEFT;
+}
+
+#centerPane .table-view .table-cell:filled {
+    -fx-alignment: CENTER;
+    -fx-border-style: hidden hidden solid hidden;
+}
+
+#centerPane #teamColumn {
+    -fx-alignment: CENTER-LEFT;
+}
+
+#centerPane .result {
+    -fx-min-width: 497;
+}
+
+#centerPane .result .scoreline {
+    -fx-min-width: 67;
+    -fx-min-height: 40; 
+    -fx-alignment: CENTER;  
+}
+
+#centerPane .result .homeTeam {
+    -fx-min-width: 225;
+    -fx-min-height: 40;
+    -fx-padding: 0 25 0 0;
+    -fx-alignment: CENTER-RIGHT;  
+}
+
+#centerPane .result .awayTeam {
+    -fx-min-width: 225;
+    -fx-min-height: 40;
+    -fx-padding: 0 0 0 25;
+    -fx-alignment: CENTER-LEFT;  
+}
+
+#centerPane .table-view .scroll-bar:vertical,
+#centerPane .table-view .scroll-bar:horizontal {
+    -fx-scale-x: 0;
+}
+
+
+/********************  ComboBox  ********************/
+
+#centerPane .combo-box-base {
+    -fx-background-radius: 0;
+}
+
+#centerPane .combo-box-base .list-cell {
+    -fx-padding: 0 0 0 15;
+}
+
+#centerPane .combo-box .list-view {
+    -fx-padding: 0;
+}
+
+#centerPane .combo-box .list-view .list-cell {
+    -fx-padding: 10 15;
+}
+
+/********************  Form  ********************/
+
+.form-win {
+    -fx-min-width: 25;
+    -fx-min-height: 25;
+    -fx-border-radius: 5;
+    -fx-alignment: CENTER;
+    -fx-background-insets: 0 2;
+    -fx-font-weight: bold;
+}
+
+.form-draw {
+    -fx-min-width: 25;
+    -fx-min-height: 25;
+    -fx-alignment: CENTER;
+    -fx-background-insets: 0 2;
+    -fx-font-weight: bold;
+}
+
+.form-loss {
+    -fx-min-width: 25;
+    -fx-min-height: 25;
+    -fx-alignment: CENTER;
+    -fx-background-insets: 0 2;
+    -fx-font-weight: bold;
+}

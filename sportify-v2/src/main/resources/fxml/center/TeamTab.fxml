@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.component.TeamTabController">
+   <children>
+     <fx:include fx:id="teamInformation" source="../component/TeamInformation.fxml" /> 
+     <Label text="Standings" textFill="WHITE">
+         <font>
+            <Font name="Verdana Bold" size="15.0" />
+         </font>
+      </Label>
+      <fx:include fx:id="leagueTableView" source="../component/LeagueTableView.fxml" /> 
+      <Label text="Fixtures" textFill="WHITE">
+         <font>
+            <Font name="Verdana Bold" size="15.0" />
+         </font>
+      </Label>
+      <fx:include fx:id="teamTableView" source="../component/TeamTableView.fxml" />
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</VBox>

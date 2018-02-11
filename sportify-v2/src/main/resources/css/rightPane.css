@@ -1,0 +1,63 @@
+/****************************************   Skin   ****************************************/
+
+* {
+    -default-background-color: #121212;
+    -default-font-color: #b3b3b3;
+}
+
+#rightPane .anchor-pane,
+.scroll-pane,
+.scroll-pane>.corner,
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: -default-background-color;
+}
+
+#rightPane .league {
+    -fx-background-color: -default-background-color;
+}
+
+.fixture-vbox {
+    -fx-background-color: -default-background-color;
+}
+
+.fixture-box {
+    -fx-background-color: -default-background-color;
+}
+
+.fixture-box .left .circle {
+    -fx-fill: transparent;
+}
+
+.fixture-box .right .label {
+    -fx-text-fill: -default-font-color;
+}
+
+/****************************************  Layout  ****************************************/
+
+/********************    Crucial fixture    ********************/
+
+#rightPane,
+#rightPane .anchor-pane,
+.scroll-pane,
+.scroll-pane>.corner,
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-padding: 0;
+}
+
+#rightPane .league .label {
+    -fx-padding: 5 0 0 15;
+}
+
+.fixture-vbox {
+    -fx-padding: 0 0 0 0;
+}
+
+.fixture-box {
+    -fx-padding: 10 0;
+}
+
+.fixture-box .right .label {
+    -fx-padding: 2.5 0;
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="150.0" prefWidth="687.0" styleClass="anchor-pane" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.component.TeamInformationController">
+   <children>
+      <StackPane layoutX="-23.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="teamImage" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </StackPane>
+      <Label fx:id="teamLabel" layoutX="10.0" layoutY="10.0" textFill="WHITE" AnchorPane.leftAnchor="165.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font name="Verdana Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="positionLabel" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="165.0">
+         <font>
+            <Font name="Verdana Bold" size="70.0" />
+         </font>
+      </Label>
+      <Label fx:id="position" text="Position" textFill="#b3b3b3" visible="false" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="165.0">
+         <font>
+            <Font name="Verdana" size="15.0" />
+         </font>
+      </Label>
+      <StackPane fx:id="formStackPane" layoutX="432.0" layoutY="96.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="125.0" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="130.0" />
+      <Label fx:id="form" text="Form" textFill="#b3b3b3" visible="false" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="171.75">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="recordLabel" textFill="WHITE" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="record" text="Record" textFill="#b3b3b3" visible="false" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font name="Verdana" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

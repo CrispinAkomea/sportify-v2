@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane id="bottomPane" dividerPositions="0.29797979797979796" minHeight="-Infinity" prefHeight="40.0" prefWidth="1230.0" stylesheets="@../css/bottomPane.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.BottomPaneController">
+   <items>
+      <AnchorPane styleClass="anchor-pane">
+         <children>
+            <Label layoutX="14.0" layoutY="12.0" text="sportify v2" AnchorPane.leftAnchor="10.0">
+               <font>
+                  <Font name="System Font" size="12.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane styleClass="anchor-pane">
+         <children>
+            <Label fx:id="updateLabel" contentDisplay="CENTER" layoutX="527.0" layoutY="11.0" prefHeight="19.0" prefWidth="175.0" styleClass="update-label" text="Done" AnchorPane.rightAnchor="155.0">
+               <font>
+                  <Font name="Verdana" size="11.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="updateProgressBar" layoutX="625.0" layoutY="18.0" prefHeight="7.0" prefWidth="100.0" progress="0.0" visible="false" AnchorPane.rightAnchor="50.0" />
+         </children></AnchorPane>
+   </items>
+</SplitPane>

@@ -1,0 +1,48 @@
+/****************************************   Skin   ****************************************/
+
+* {
+    -default-background-color: #181818;
+    -default-font-color: #b3b3b3;
+    -default-progress-color: #189df7;
+}
+
+#bottomPane .viewport,
+#bottomPane .anchor-pane {
+    -fx-background-color: -default-background-color;
+}
+
+/********************  Progressbar  ********************/
+
+#bottomPane .update-label {
+    -fx-border-style: dotted;
+    -fx-border-color: -default-font-color;
+}
+
+#bottomPane .progress-bar>.bar {
+    -fx-background-color: -default-progress-color;
+}
+
+/****************************************  Layout  ****************************************/
+
+#bottomPane,
+#bottomPane .viewport,
+#bottomPane .anchor-pane {
+    -fx-padding: 0;
+}
+
+/********************  Progressbar  ********************/
+
+#bottomPane .update-label {
+    -fx-padding: 2 8;
+    -fx-border-width: 0 0 0 2;
+}
+
+#bottomPane .progress-bar>.bar {
+    -fx-padding: 0.25em;
+    -fx-background-insets: 0;
+    -fx-background-radius: 25;
+}
+
+.progress-bar>.track {
+    -fx-background-radius: 25;
+}

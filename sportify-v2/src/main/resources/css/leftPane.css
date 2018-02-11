@@ -1,0 +1,136 @@
+/****************************************   Skin   ****************************************/
+
+* {
+    -default-background-color: #121212;
+    -default-font-color: #b3b3b3;
+    -default-border-color: #2cca60;
+    -alternate-background-color: #181818;
+}
+
+#leftPane .list-view,
+#leftPane .anchor-pane,
+.scroll-pane,
+.scroll-pane>.corner,
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: -default-background-color;
+}
+
+/********************  Listview  ********************/
+
+#leftPane .list-view {
+    -fx-focus-color: transparent;
+}
+
+#leftPane .list-view .list-cell {
+    -fx-text-fill: -default-font-color;
+    -fx-background-color: transparent;
+}
+
+#leftPane .list-view .list-cell:filled:selected {
+    -fx-border-color: -default-border-color;
+    -fx-text-fill: white;
+}
+
+#leftPane .list-view .list-cell:filled:hover {
+    -fx-text-fill: white;
+}
+
+/********************  Accordin  ********************/
+
+.title {
+    -fx-background-color: -default-background-color;
+}
+
+.title>.arrow-button .arrow {
+    -fx-background-color: -default-font-color;
+}
+
+.titled-pane {
+    -fx-text-fill: -default-font-color;
+}
+
+.titled-pane:focused {
+    -fx-text-fill: white;
+}
+
+.titled-pane:focused>.title>.arrow-button .arrow {
+    -fx-focus-color: transparent;
+}
+
+/********************  Open note  ********************/
+
+
+#leftPane .open-note{
+    -fx-background-color: -default-background-color;
+    -fx-border-color: -alternate-background-color;
+}
+
+#leftPane .open-note:hover {
+    -fx-background-color: derive(-default-background-color, 1%);
+}
+
+#leftPane .open-note:hover .label {
+    -fx-text-fill: white;
+}
+
+/****************************************  Layout  ****************************************/
+
+#leftPane {
+    -fx-padding: 0;
+}
+
+#leftPane .list-view,
+#leftPane .anchor-pane,
+.scroll-pane,
+.scroll-pane>.corner,
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-padding: 0;
+}
+
+#leftPane .list-view .scroll-bar:vertical,
+#leftPane .list-view .scroll-bar:horizontal {
+    -fx-scale-x: 0;
+}
+
+/********************  Listview  ********************/
+
+#leftPane .list-view .list-cell:filled {
+    -fx-padding: 8 0 8 15;
+}
+
+#leftPane .list-view .list-cell:empty {
+    -fx-padding: 0;
+}
+
+#leftPane .list-view .list-cell:filled:selected {
+    -fx-border-width: 4;
+    -fx-border-style: hidden hidden hidden solid;
+}
+
+/********************  Accordin  ********************/
+
+.title {
+    -fx-padding: 10 0;
+}
+
+.title>.arrow-button .arrow {
+    -fx-translate-x: 195;
+}
+
+.titled-pane>*.content {
+    -fx-border-width: 0;
+}
+
+#teamAccordion .list-view .list-cell:filled {
+    -fx-padding: 8 0 8 20;
+}
+
+/********************  Open note  ********************/
+
+
+#leftPane .open-note {
+    -fx-border-width: 2;
+    -fx-border-style: solid hidden hidden hidden;
+}

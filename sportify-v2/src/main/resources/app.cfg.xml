@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>Properties File</comment>
+	<entry key="app.name">Sportify</entry>
+	<entry key="connection.driver_class">org.sqlite.JDBC</entry>
+	<entry key="connection.url">jdbc:sqlite:src/main/resources/app.db</entry>
+	<entry key="resources.path">src/main/resources/</entry>
+	<entry key="resources.path.tmp">src/main/resources/tmp/</entry>
+	<entry key="resources.path.img.icon">/img/icon/</entry>
+	<entry key="resources.path.img.badge">/img/badge/</entry>
+	<entry key="statistics.url">http://www.football-data.co.uk/mmz4281/1718/</entry>	
+	<entry key="fixtures.url">http://www.football-data.co.uk/fixtures.csv</entry>	
+</properties>

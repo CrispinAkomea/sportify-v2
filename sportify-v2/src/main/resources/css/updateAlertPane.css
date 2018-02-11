@@ -1,0 +1,103 @@
+/****************************************   Skin   ****************************************/
+
+* {
+    -default-background-color: #282828;
+    -alternate-background-color: #333333;
+    -default-font-color: #b3b3b3;
+    -default-progress-color: #189df7;
+    -button-background-color: #161616;
+    -default-thumb-color: #e5e5e5;
+}
+
+#updateAlertPane .viewport,
+#updateAlertPane .default-anchor-pane {
+    -fx-background-color: -default-background-color;
+}
+
+#updateAlertPane .alternate-anchor-pane {
+    -fx-background-color: -alternate-background-color;
+}
+
+.scroll-pane,
+.scroll-pane>.corner,
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-focus-color: transparent;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: -default-thumb-color;
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: -default-background-color;
+}
+
+.label {
+    -fx-text-fill: white;
+}
+
+#updatePane .progress-bar>.bar {
+    -fx-background-color: -default-progress-color;
+}
+
+.button {
+    -fx-border-color: white;
+    -fx-text-fill: white;
+    -fx-background-color: -button-background-color;
+}
+
+/****************************************  Layout  ****************************************/
+
+#updateAlertPane,
+#updateAlertPane .viewport,
+#updateAlertPane .default-anchor-pane,
+#updateAlertPane .alternate-anchor-pane,
+.split-pane,
+.split-pane>.split-pane-divider,
+.scroll-pane,
+.scroll-pane>.corner,
+.scroll-bar:vertical,
+.scroll-bar:horizontal   {
+    -fx-padding: 0;
+}
+
+.scroll-bar .decrement-button,
+.scroll-bar .increment-button {
+    -fx-scale-x: 0;
+    -fx-padding: 1.25;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-opacity: 0.5;
+    -fx-background-radius: 5em;
+}
+
+.scroll-bar:vertical {
+    -fx-padding: 0;
+}
+
+.progress-bar>.bar {
+    -fx-padding: 0.25em;
+    -fx-background-insets: 0;
+    -fx-background-radius: 25;
+}
+
+.progress-bar>.track {
+    -fx-background-radius: 25;
+}
+
+.button {
+    -fx-font-size: 12px;
+    -fx-padding: 3 20;
+    -fx-border-width: 1;
+    -fx-border-radius: 25;
+    -fx-background-radius: 25;
+}
+
+.button:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+}
