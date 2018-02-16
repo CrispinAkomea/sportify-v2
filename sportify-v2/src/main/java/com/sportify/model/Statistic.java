@@ -31,7 +31,7 @@ public class Statistic {
 	 * 
 	 **************************************************************************/
 
-	private Statistic() {
+	public Statistic() {
 
 	}
 

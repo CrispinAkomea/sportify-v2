@@ -16,7 +16,7 @@
       <AnchorPane prefHeight="70.0" prefWidth="600.0" styleClass="default-anchor-pane">
          <children>
             <Label fx:id="updateLabel" layoutX="20.0" layoutY="82.0" prefHeight="17.0" prefWidth="360.0" styleClass="update-label" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="22.0" />
-            <ProgressBar fx:id="updateProgressBar" layoutX="47.0" layoutY="89.0" prefHeight="10.0" prefWidth="520.0" progress="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="50.0" />
+            <ProgressBar fx:id="updateProgressBar" layoutX="47.0" layoutY="89.0" prefHeight="9.0" prefWidth="520.0" progress="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="50.0" />
          </children>
       </AnchorPane>
       <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" styleClass="default-anchor-pane">

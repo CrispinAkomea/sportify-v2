@@ -4,7 +4,7 @@
     -default-background-color: #282828;
     -alternate-background-color: #333333;
     -default-font-color: #b3b3b3;
-    -default-progress-color: #189df7;
+    -default-progress-color: #3B99FC;
     -button-background-color: #161616;
     -default-thumb-color: #e5e5e5;
 }
@@ -38,7 +38,7 @@
     -fx-text-fill: white;
 }
 
-#updatePane .progress-bar>.bar {
+#updateAlertPane .progress-bar>.bar {
     -fx-background-color: -default-progress-color;
 }
 
