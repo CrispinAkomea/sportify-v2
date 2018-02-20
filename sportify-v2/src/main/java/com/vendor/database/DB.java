@@ -6,8 +6,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.dbutils.handlers.MapListHandler;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import com.vendor.App;
 import com.vendor.contract.QueryBuilder;
@@ -27,7 +25,6 @@ public class DB implements QueryBuilder, QueryRunner {
 
 	private String table;
 	private StringBuilder query;
-	private static final Logger logger = LogManager.getLogger(DB.class);
 
 	private DB() {
 		query = new StringBuilder();
@@ -46,6 +43,23 @@ public class DB implements QueryBuilder, QueryRunner {
 		DB db = new DB();
 		db.query.append(query);
 		return db;
+	}
+
+	public void setQuery(String query) {
+		this.query.setLength(0);
+		this.query.append(query);
+	}
+
+	public String getQuery() {
+		return query.toString();
+	}
+
+	public void setTable(String table) {
+		this.table = table;
+	}
+
+	public String getTable() {
+		return table;
 	}
 
 	@Override
@@ -89,7 +103,7 @@ public class DB implements QueryBuilder, QueryRunner {
 	@Override
 	public DB and(String column, String operator, Object value) {
 		query.setLength(query.length() - 1);
-		query.append(" AND " + column + " = '" + value + "')");
+		query.append(" AND " + column + " " + operator + " '" + value + "')");
 		return this;
 	}
 
@@ -103,7 +117,7 @@ public class DB implements QueryBuilder, QueryRunner {
 	@Override
 	public DB or(String column, String operator, Object value) {
 		query.setLength(query.length() - 1);
-		query.append(" OR " + column + " = '" + value + "')");
+		query.append(" OR " + column + " " + operator + " '" + value + "')");
 		return this;
 	}
 
@@ -213,25 +227,15 @@ public class DB implements QueryBuilder, QueryRunner {
 
 	private String execute(String query) throws SQLException {
 		Connection connection = DBUtil.createConnection(App.getDatabase());
-		List<Map<String, Object>> listOfMaps;
-		try {
-			listOfMaps = new org.apache.commons.dbutils.QueryRunner().query(connection, query, new MapListHandler());
-		} catch (SQLException e) {
-			logger.error("DB_LOG - Error during execution of execute query.\n" + e.getMessage() + "\n");
-			throw new SQLException();
-		}
+		List<Map<String, Object>> listOfMaps = new org.apache.commons.dbutils.QueryRunner().query(connection, query,
+				new MapListHandler());
 		DBUtil.closeConnection(connection);
 		return GsonBuilderUtil.createGson().toJson(listOfMaps);
 	}
 
 	private void update(String query) throws SQLException {
 		Connection connection = DBUtil.createConnection(App.getDatabase());
-		try {
-			new org.apache.commons.dbutils.QueryRunner().update(connection, query);
-		} catch (SQLException e) {
-			logger.error("DB_LOG - Error during execution of update query.\n" + e.getMessage() + "\n");
-			throw new SQLException();
-		}
+		new org.apache.commons.dbutils.QueryRunner().update(connection, query);
 		DBUtil.closeConnection(connection);
 	}
 
