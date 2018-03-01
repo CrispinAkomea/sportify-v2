@@ -41,7 +41,7 @@ public class App {
 			statisticsUrl = properties.getProperty("statistics.url");
 			fixturesUrl = properties.getProperty("fixtures.url");
 		} catch (IOException e) {
-			logger.error("CONFIG_LOG - Failure to load app configuration properties. (" + e.getMessage() + ")");
+			logger.error("CONFIG_LOG - Failure to load app configuration properties. (" + e + ")");
 			e.printStackTrace();
 		}
 	}

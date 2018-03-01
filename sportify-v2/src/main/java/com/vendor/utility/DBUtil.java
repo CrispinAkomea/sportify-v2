@@ -27,7 +27,7 @@ public class DBUtil {
 		try {
 			return DriverManager.getConnection(database);
 		} catch (SQLException e) {
-			logger.error("DB_LOG - Error during connection to database.\n" + e.getMessage() + "\n");
+			logger.error("DB_LOG - Error during connection to database.\n" + e + "\n");
 			throw new SQLException();
 		}
 	}
@@ -45,7 +45,7 @@ public class DBUtil {
 			try {
 				connection.close();
 			} catch (SQLException e) {
-				logger.error("DB_LOG - Error during closure of connection object.\n" + e.getMessage() + "\n");
+				logger.error("DB_LOG - Error during closure of connection object.\n" + e + "\n");
 				throw new SQLException();
 			}
 	}
@@ -64,13 +64,12 @@ public class DBUtil {
 	public static String[] getColumnNames(String database, String table) throws SQLException {
 		String[] columns = null;
 		Connection connection = DBUtil.createConnection(database);
-		try (Statement statement = connection.createStatement()) {
-			try (ResultSet result = statement.executeQuery("SELECT * FROM " + table + " WHERE id = '1';")) {
-				int count = result.getMetaData().getColumnCount();
-				columns = new String[count];
-				for (int i = 0; i < count; i++)
-					columns[i] = result.getMetaData().getColumnName(i + 1);
-			}
+		try (Statement statement = connection.createStatement();
+				ResultSet result = statement.executeQuery("SELECT * FROM " + table + " WHERE id = '1';")) {
+			int count = result.getMetaData().getColumnCount();
+			columns = new String[count];
+			for (int i = 0; i < count; i++)
+				columns[i] = result.getMetaData().getColumnName(i + 1);
 		}
 		DBUtil.closeConnection(connection);
 		return ArrayUtils.removeElement(columns, "id");
