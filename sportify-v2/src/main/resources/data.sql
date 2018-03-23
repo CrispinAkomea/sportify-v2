@@ -1,45 +1,45 @@
 CREATE TABLE IF NOT EXISTS Leagues (
-	`id`			INTEGER PRIMARY KEY,
-	`division`		VARCHAR(5) NOT NULL,
-	`name`			VARCHAR(50) NOT NULL,
-	`season_start`	DATE NOT NULL,
-	`season_end`	DATE NOT NULL
+	`id`				INTEGER PRIMARY KEY,
+	`division`			VARCHAR(5) NOT NULL,
+	`name`				VARCHAR(50) NOT NULL,
+	`season_start`		DATE NOT NULL,
+	`season_end`		DATE 	NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Teams (
-	`id`		INTEGER PRIMARY KEY,
-	`division`	VARCHAR(5) NOT NULL,
-	`name`		VARCHAR(50) NOT NULL,
-	`alias`		VARCHAR(50) NOT NULL,
-	`stadium`	VARCHAR(50) NOT NULL
+	`id`				INTEGER PRIMARY KEY,
+	`division`			VARCHAR(5) NOT NULL,
+	`name`				VARCHAR(50) NOT NULL,
+	`alias`				VARCHAR(50) NOT NULL,
+	`stadium`			VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Statistics (
-	`id`		INTEGER PRIMARY KEY,
-	`Div`		VARCHAR(5) NOT NULL,
-	`Date`		VARCHAR(10) NOT NULL,
-	`HomeTeam`	VARCHAR(50) NOT NULL,
-	`AwayTeam`	VARCHAR(50) NOT NULL,
-	`FTHG`		INTEGER NOT NULL,
-	`FTAG`		INTEGER NOT NULL,
-	`FTR`		CHARACTER(1) NOT NULL,
-	`HTHG`		INTEGER NOT NULL,
-	`HTAG`		INTEGER NOT NULL,
-	`HTR`		CHARACTER(1) NOT NULL,
-	`Referee`	VARCHAR(50) NOT NULL
+	`id`				INTEGER PRIMARY KEY,
+	`Div`				VARCHAR(5) NOT NULL,
+	`Date`				VARCHAR(10) NOT NULL,
+	`HomeTeam`			VARCHAR(50) NOT NULL,
+	`AwayTeam`			VARCHAR(50) NOT NULL,
+	`FTHG`				INTEGER NOT NULL,
+	`FTAG`				INTEGER NOT NULL,
+	`FTR`				CHARACTER(1) NOT NULL,
+	`HTHG`				INTEGER NOT NULL,
+	`HTAG`				INTEGER NOT NULL,
+	`HTR`				CHARACTER(1) NOT NULL,
+	`Referee`			VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Standings (
-	`id`		INTEGER PRIMARY KEY,
-	`division`	VARCHAR(5) NOT NULL,
-	`name`		VARCHAR(50) NOT NULL,
-	`W`			INTEGER NOT NULL,
-	`D`			INTEGER NOT NULL,
-	`L`			INTEGER NOT NULL,
-	`GF`		INTEGER NOT NULL,
-	`GA`		INTEGER NOT NULL,
-	`GD`		INTEGER NOT NULL,
-	`P`			INTEGER
+	`id`					INTEGER PRIMARY KEY,
+	`division`			VARCHAR(5) NOT NULL,
+	`name`				VARCHAR(50) NOT NULL,
+	`W`					INTEGER NOT NULL,
+	`D`					INTEGER NOT NULL,
+	`L`					INTEGER NOT NULL,
+	`GF`					INTEGER NOT NULL,
+	`GA`					INTEGER NOT NULL,
+	`GD`					INTEGER NOT NULL,
+	`P`					INTEGER
 );
 
 INSERT INTO Leagues (`division`, `name`, `season_start`, `season_end`)
@@ -112,7 +112,7 @@ VALUES
 ('E2', "Bury", "Bury", "Gigg Lane"),
 ('E2', "Charlton Athletic", "Charlton", "The Valley"),
 ('E2', "Doncaster Rovers", "Doncaster", "Keepmoat Stadium"),
-('E2', "Fleetwood Town", "Fleetwood", "Highbury Stadium"),
+('E2', "Fleetwood Town", "Fleetwood Town", "Highbury Stadium"),
 ('E2', "Gillingham", "Gillingham", "Priestfield Stadium"),
 ('E2', "Milton Keynes Dons", "Milton Keynes Dons", "Stadium:mk"),
 ('E2', "Northampton Town", "Northampton", "Sixfields Stadium"),
@@ -230,7 +230,7 @@ VALUES
 ('SP1', "Sevilla", "Sevilla", "Ramón Sánchez Pizjuán"),
 ('SP1', "Valencia", "Valencia", "Mestalla"),
 ('SP1', "Villarreal", "Villarreal", "Estadio de la Cerámica"),
-('N1', "ADO Den Haag", "Haag", "Cars Jeans Stadion"),
+('N1', "ADO Den Haag", "Den Haag", "Cars Jeans Stadion"),
 ('N1', "Ajax", "Ajax", "Amsterdam ArenA"),
 ('N1', "AZ", "AZ Alkmaar", "AFAS Stadion"),
 ('N1', "Excelsior", "Excelsior", "Van Donge & De Roo Stadion"),
@@ -238,7 +238,7 @@ VALUES
 ('N1', "FC Groningen", "Groningen", "Noordlease Stadion"),
 ('N1', "sc Heerenveen", "Heerenveen", "Abe Lenstra Stadion"),
 ('N1', "Heracles Almelo", "Heracles", "Polman Stadion"),
-('N1', "NAC Breda", "NAC", "Rat Verlegh Stadion"),
+('N1', "NAC Breda", "NAC Breda", "Rat Verlegh Stadion"),
 ('N1', "PEC Zwolle", "Zwolle", "MAC³PARK stadion"),
 ('N1', "PSV", "PSV Eindhoven", "Philips Stadion"),
 ('N1', "Roda JC Kerkrade", "Roda", "Parkstad Limburg Stadion"),
@@ -267,7 +267,7 @@ VALUES
 ('P1', "Belenenses", "Belenenses", "Estádio do Restelo"),
 ('P1', "Benfica", "Benfica", "Estádio da Luz"),
 ('P1', "Boavista", "Boavista", "Estádio do Bessa"),
-('P1', "Braga", "Braga", "Estádio Municipal de Braga"),
+('P1', "Braga", "Sp Braga", "Estádio Municipal de Braga"),
 ('P1', "Chaves", "Chaves", "Estádio Municipal Eng. Manuel Branco Teixeira"),
 ('P1', "Desportivo das Aves", "Aves", "Estádio do CD Aves"),
 ('P1', "Estoril", "Estoril", "Estádio António Coimbra da Mota"),
@@ -281,6 +281,7 @@ VALUES
 ('P1', "Sporting CP", "Sp Lisbon", "Estádio José Alvalade"),
 ('P1', "Tondela", "Tondela", "Estádio João Cardoso"),
 ('P1', "Vitória de Guimarães", "Guimaraes", "Estádio D. Afonso Henriques"),
+('P1', "Vitória de Setúbal", "Setubal", "Estádio do Bonfim"),
 ('T1', "Akhisar Belediyespor", "Belediyespor", "Manisa 19 Mayıs Stadium"),
 ('T1', "Alanyaspor", "Alanyaspor", "Alanya Oba Stadium"),
 ('T1', "Antalyaspor", "Antalyaspor", "Antalya Stadium"),
@@ -298,7 +299,7 @@ VALUES
 ('T1', "Osmanlıspor", "Osmanlispor", "Osmanlı Stadyumu"),
 ('T1', "Sivasspor", "Sivasspor", "Sivas Arena"),
 ('T1', "Trabzonspor", "Trabzonspor", "Şenol Güneş Stadium"),
-('T1', "Yeni Malatyaspor", "Yeni", "Malatya İnönü Stadium"),
+('T1', "Yeni Malatyaspor", "Yeni Malatyaspor", "Malatya İnönü Stadium"),
 ('SC0', "Aberdeen", "Aberdeen", "Pittodrie Stadium"),
 ('SC0', "Celtic", "Celtic", "Celtic Park"),
 ('SC0', "Dundee", "Dundee", "Dens Park"),
