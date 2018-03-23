@@ -30,16 +30,31 @@ CREATE TABLE IF NOT EXISTS Statistics (
 );
 
 CREATE TABLE IF NOT EXISTS Standings (
-	`id`					INTEGER PRIMARY KEY,
+	`id`				INTEGER PRIMARY KEY,
 	`division`			VARCHAR(5) NOT NULL,
 	`name`				VARCHAR(50) NOT NULL,
+	`position`			INTEGER NULL,
+	`P`					INTEGER NOT NULL,
 	`W`					INTEGER NOT NULL,
 	`D`					INTEGER NOT NULL,
 	`L`					INTEGER NOT NULL,
-	`GF`					INTEGER NOT NULL,
-	`GA`					INTEGER NOT NULL,
-	`GD`					INTEGER NOT NULL,
-	`P`					INTEGER
+	`GF`				INTEGER NOT NULL,
+	`GA`				INTEGER NOT NULL,
+	`GD`				INTEGER NOT NULL,
+	`points`			INTEGER NOT NULL,
+	`pastPoints`		INTEGER NOT NULL,
+	`movement`			INTEGER NULL
+);
+
+CREATE TABLE IF NOT EXISTS Fixtures (
+	`id`				INTEGER PRIMARY KEY,
+	`division`			VARCHAR(5) NOT NULL,
+	`date`				VARCHAR(50) NOT NULL,
+	`HomeTeam`			VARCHAR(50) NOT NULL,
+	`AwayTeam`			VARCHAR(50) NOT NULL,
+	`B365H`				REAL NOT NULL,
+	`B365D`				REAL NOT NULL,
+	`B365A`				REAL NOT NULL
 );
 
 INSERT INTO Leagues (`division`, `name`, `season_start`, `season_end`)
@@ -272,7 +287,7 @@ VALUES
 ('P1', "Desportivo das Aves", "Aves", "Estádio do CD Aves"),
 ('P1', "Estoril", "Estoril", "Estádio António Coimbra da Mota"),
 ('P1', "Feirense", "Feirense", "Estádio Marcolino de Castro"),
-('P1', "Marítimo", "Marítimo", "Estádio do Marítimo"),
+('P1', "Marítimo", "Maritimo", "Estádio do Marítimo"),
 ('P1', "Moreirense", "Moreirense", "Parque de Jogos Comendador Joaquim de Almeida Freitas"),
 ('P1', "Paços de Ferreira", "Pacos Ferreira", "Estádio Capital do Móvel"),
 ('P1', "Porto", "Porto", "Estádio do Dragão"),
@@ -282,7 +297,7 @@ VALUES
 ('P1', "Tondela", "Tondela", "Estádio João Cardoso"),
 ('P1', "Vitória de Guimarães", "Guimaraes", "Estádio D. Afonso Henriques"),
 ('P1', "Vitória de Setúbal", "Setubal", "Estádio do Bonfim"),
-('T1', "Akhisar Belediyespor", "Belediyespor", "Manisa 19 Mayıs Stadium"),
+('T1', "Akhisar Belediyespor", "Akhisar Belediyespor", "Manisa 19 Mayıs Stadium"),
 ('T1', "Alanyaspor", "Alanyaspor", "Alanya Oba Stadium"),
 ('T1', "Antalyaspor", "Antalyaspor", "Antalya Stadium"),
 ('T1', "Beşiktaş", "Besiktas", "Vodafone Park"),
