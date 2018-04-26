@@ -12,57 +12,50 @@ import com.vendor.utility.ModelUtil;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 
-public class FormPane {
+public class FormPane extends FlowPane {
 
-	private FlowPane formPane;
-	private final Team team;
-	private final Statistic[] statistics;
+	private Team team;
+	private Statistic[] statistics;
 
 	public FormPane(String teamName) throws SQLException {
-		formPane = new FlowPane();
+		initialize(teamName);
+	}
+
+	private void initialize(String teamName) throws SQLException {
 		team = ModelUtil.toModel((String) DB.table("Teams").where("name", teamName).first(), Team.class);
 		statistics = ModelUtil.toModels((String) DB.table("Statistics").where("HomeTeam", team.getAlias())
 				.orWhere("AwayTeam", team.getAlias()).orderBy("id", "desc").take(5), Statistic[].class);
-		setFormBox();
-	}
-
-	private void setFormBox() throws SQLException {
 		Collections.reverse(Arrays.asList(statistics));
 		for (Statistic statistic : statistics) {
-			addResultToFormPane(statistic);
+			addToFormPane(statistic);
 		}
 	}
 
-	private void addResultToFormPane(Statistic statistic) {
+	private void addToFormPane(Statistic statistic) {
 		if (statistic.getFTR() == 'D') {
-			Label draw = new Label("D");
-			draw.getStyleClass().add("form-draw");
-			formPane.getChildren().add(draw);
+			getChildren().add(new ResultLabel("D", "form-draw"));
 		} else if (statistic.getHomeTeam().equals(team.getAlias())) {
 			if (statistic.getFTR() == 'H') {
-				Label win = new Label("W");
-				win.getStyleClass().add("form-win");
-				formPane.getChildren().add(win);
+				getChildren().add(new ResultLabel("W", "form-win"));
 			} else {
-				Label loss = new Label("L");
-				loss.getStyleClass().add("form-loss");
-				formPane.getChildren().add(loss);
+				getChildren().add(new ResultLabel("L", "form-loss"));
 			}
 		} else {
 			if (statistic.getFTR() == 'A') {
-				Label win = new Label("W");
-				win.getStyleClass().add("form-win");
-				formPane.getChildren().add(win);
+				getChildren().add(new ResultLabel("W", "form-win"));
 			} else {
-				Label loss = new Label("L");
-				loss.getStyleClass().add("form-loss");
-				formPane.getChildren().add(loss);
+				getChildren().add(new ResultLabel("L", "form-loss"));
 			}
 		}
 	}
-	
-	public FlowPane getForPane() {
-		return formPane;
+
+}
+
+class ResultLabel extends Label {
+
+	public ResultLabel(String text, String style) {
+		super(text);
+		getStyleClass().add(style);
 	}
 
 }
