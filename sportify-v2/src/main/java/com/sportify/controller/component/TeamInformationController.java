@@ -108,7 +108,7 @@ public class TeamInformationController {
 		teamLabel.setText(teamName);
 		setStats(teamName);
 		formStackPane.getChildren().clear();
-		formStackPane.getChildren().add(new FormPane(teamName).getForPane());
+		formStackPane.getChildren().add(new FormPane(teamName));
 	}
 
 	/**
