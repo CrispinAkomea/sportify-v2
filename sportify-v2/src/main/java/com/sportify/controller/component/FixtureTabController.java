@@ -83,7 +83,7 @@ public class FixtureTabController {
 					addTeam(newValue);
 					sortTeams();
 					fixtureInformationController.getHomeFormStackPane().getChildren()
-							.add(new FormPane(newValue).getForPane());
+							.add(new FormPane(newValue));
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}
@@ -108,8 +108,7 @@ public class FixtureTabController {
 					removeTeam(oldValue);
 					addTeam(newValue);
 					sortTeams();
-					fixtureInformationController.getAwayFormStackPane().getChildren()
-							.add(new FormPane(newValue).getForPane());
+					fixtureInformationController.getAwayFormStackPane().getChildren().add(new FormPane(newValue));
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}
