@@ -13,6 +13,10 @@
     -fx-background-color: -default-background-color;
 }
 
+#rightPane > .viewport {
+   -fx-background-color: transparent;
+}
+
 #rightPane .league {
     -fx-background-color: -default-background-color;
 }
