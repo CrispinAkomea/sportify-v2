@@ -4,11 +4,10 @@ import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.Collections;
 
-import com.vendor.database.DB;
-import com.vendor.utility.ModelUtil;
-
 import caa.sportify.model.Statistic;
 import caa.sportify.model.Team;
+import caa.vendor.database.DB;
+import caa.vendor.utility.ModelUtil;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 

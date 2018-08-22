@@ -4,8 +4,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.vendor.database.DB;
-import com.vendor.utility.ModelUtil;
+import caa.vendor.database.DB;
+import caa.vendor.utility.ModelUtil;
 
 /**
  * @author Crispin A.

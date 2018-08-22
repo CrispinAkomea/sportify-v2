@@ -2,11 +2,10 @@ package caa.sportify.controller.component;
 
 import java.sql.SQLException;
 
-import com.vendor.database.DB;
-import com.vendor.utility.ModelUtil;
-
 import caa.sportify.controller.LeftPaneController;
 import caa.sportify.model.League;
+import caa.vendor.database.DB;
+import caa.vendor.utility.ModelUtil;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;

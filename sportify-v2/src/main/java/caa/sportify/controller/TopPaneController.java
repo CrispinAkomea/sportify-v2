@@ -7,14 +7,13 @@ import java.util.ArrayList;
 
 import org.controlsfx.control.textfield.TextFields;
 
-import com.vendor.database.DB;
-import com.vendor.utility.ModelUtil;
-
 import caa.sportify.database.Standings;
 import caa.sportify.database.Statistics;
 import caa.sportify.model.League;
 import caa.sportify.model.Team;
 import caa.sportify.view.UpdateAlertPane;
+import caa.vendor.database.DB;
+import caa.vendor.utility.ModelUtil;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;

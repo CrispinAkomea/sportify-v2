@@ -2,13 +2,12 @@ package caa.sportify.controller.component;
 
 import java.sql.SQLException;
 
-import com.vendor.database.DB;
-import com.vendor.utility.ModelUtil;
-
 import caa.sportify.controller.RightPaneController;
 import caa.sportify.model.Fixture;
 import caa.sportify.model.League;
 import caa.sportify.view.FixtureHBox;
+import caa.vendor.database.DB;
+import caa.vendor.utility.ModelUtil;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

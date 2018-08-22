@@ -2,7 +2,7 @@ package caa.sportify.utility;
 
 import java.io.InputStream;
 
-import com.vendor.App;
+import caa.sportify.Config;
 
 /**
  * 
@@ -15,15 +15,15 @@ import com.vendor.App;
 public class ImageUtil {
 
 	public static InputStream getImage(Object client, String image) {
-		return client.getClass().getResourceAsStream(App.getResourcePath() + image);
+		return client.getClass().getResourceAsStream(Config.getResourcePath() + image);
 	}
 
 	public static InputStream getIcon(Object client, String image) {
-		return client.getClass().getResourceAsStream(App.getResourcePathImgIcon() + image);
+		return client.getClass().getResourceAsStream(Config.getResourcePathImgIcon() + image);
 	}
 
 	public static InputStream getBadge(Object client, String image) {
-		return client.getClass().getResourceAsStream(App.getResourcePathImgBadge() + image);
+		return client.getClass().getResourceAsStream(Config.getResourcePathImgBadge() + image);
 	}
 
 }

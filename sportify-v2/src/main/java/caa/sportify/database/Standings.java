@@ -5,17 +5,16 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-import com.vendor.App;
-import com.vendor.contract.QueryBuilder;
-import com.vendor.database.DB;
-import com.vendor.utility.DBUtil;
-import com.vendor.utility.ModelUtil;
-
 import caa.sportify.contract.TableUpdater;
 import caa.sportify.model.League;
 import caa.sportify.model.Standing;
 import caa.sportify.model.Statistic;
 import caa.sportify.model.Team;
+import caa.vendor.App;
+import caa.vendor.contract.QueryBuilder;
+import caa.vendor.database.DB;
+import caa.vendor.utility.DBUtil;
+import caa.vendor.utility.ModelUtil;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 

@@ -7,16 +7,16 @@ import java.sql.SQLException;
 
 import org.apache.commons.io.FileUtils;
 
-import com.vendor.App;
-import com.vendor.contract.QueryBuilder;
-import com.vendor.database.DB;
-import com.vendor.utility.DBUtil;
-import com.vendor.utility.ModelUtil;
-
+import caa.sportify.Config;
 import caa.sportify.contract.TableUpdater;
 import caa.sportify.model.League;
 import caa.sportify.utility.CsvUtil;
 import caa.sportify.utility.HttpUtil;
+import caa.vendor.App;
+import caa.vendor.contract.QueryBuilder;
+import caa.vendor.database.DB;
+import caa.vendor.utility.DBUtil;
+import caa.vendor.utility.ModelUtil;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 
@@ -107,8 +107,8 @@ public class Statistics implements TableUpdater {
 	 */
 	private void update(Object league) throws MalformedURLException, IOException, SQLException {
 		String division = ((League) league).getDivision();
-		String url = App.getStatisticsUrl() + division + ".csv";
-		String file = App.getResourcePathTemp() + division + ".csv";
+		String url = Config.getStatisticsUrl() + division + ".csv";
+		String file = Config.getResourcePathTemp() + division + ".csv";
 		HttpUtil.downloadFile(url, file);
 		removeIncompleteStatistics();
 		DB.raw("INSERT INTO " + table + " (" + QueryBuilder.getValues(DBUtil.getColumnNames(App.getDatabase(), table))

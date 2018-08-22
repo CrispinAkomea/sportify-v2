@@ -2,13 +2,12 @@ package caa.sportify.view;
 
 import java.sql.SQLException;
 
-import com.vendor.database.DB;
-import com.vendor.utility.ModelUtil;
-
 import caa.sportify.model.Fixture;
 import caa.sportify.model.League;
 import caa.sportify.model.Team;
 import caa.sportify.utility.ImageUtil;
+import caa.vendor.database.DB;
+import caa.vendor.utility.ModelUtil;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
