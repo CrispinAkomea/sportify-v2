@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<ScrollPane id="centerPane" fx:id="centerScrollPane" hbarPolicy="NEVER" stylesheets="@../css/centerPane.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.CenterPaneController">
+<ScrollPane id="centerPane" fx:id="centerScrollPane" hbarPolicy="NEVER" stylesheets="@../css/centerPane.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="caa.sportify.controller.CenterPaneController">
    <content>
       <AnchorPane fx:id="centerAnchorPane">
 			<TabPane id="centerTabPane" fx:id="centerTabPane" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">

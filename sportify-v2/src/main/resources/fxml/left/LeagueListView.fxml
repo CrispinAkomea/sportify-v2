@@ -4,7 +4,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefWidth="217.0" styleClass="anchor-pane" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.component.LeagueListViewController">
+<AnchorPane prefWidth="217.0" styleClass="anchor-pane" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="caa.sportify.controller.component.LeagueListViewController">
    <children>
       <Label layoutX="10.0" layoutY="10.0" text="Leagues" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
       <ListView id="leagueListView" fx:id="leagueListView" layoutX="10.0" layoutY="10.0" prefHeight="430.0" prefWidth="217.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />

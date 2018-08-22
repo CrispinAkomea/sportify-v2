@@ -3,7 +3,7 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="700.0" minWidth="1100.0" prefHeight="800.0" prefWidth="1280.0" styleClass="main" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.MainController">
+<VBox id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="700.0" minWidth="1100.0" prefHeight="800.0" prefWidth="1280.0" styleClass="main" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="caa.sportify.controller.MainController">
   <children>
     <fx:include fx:id="topPane" source="TopPane.fxml" />
     <SplitPane dividerPositions="0.5, 0.5" focusTraversable="true" VBox.vgrow="ALWAYS">

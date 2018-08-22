@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.component.FixtureInformationController">
+<AnchorPane xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="caa.sportify.controller.component.FixtureInformationController">
    <children>
       <GridPane prefWidth="687.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <columnConstraints>

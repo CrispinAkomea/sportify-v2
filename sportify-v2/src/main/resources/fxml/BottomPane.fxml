@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane id="bottomPane" dividerPositions="0.29797979797979796" minHeight="-Infinity" prefHeight="40.0" prefWidth="1230.0" stylesheets="@../css/bottomPane.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.BottomPaneController">
+<SplitPane id="bottomPane" dividerPositions="0.29797979797979796" minHeight="-Infinity" prefHeight="40.0" prefWidth="1230.0" stylesheets="@../css/bottomPane.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="caa.sportify.controller.BottomPaneController">
    <items>
       <AnchorPane styleClass="anchor-pane">
          <children>

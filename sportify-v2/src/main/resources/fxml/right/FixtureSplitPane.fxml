@@ -3,4 +3,4 @@
 <?import javafx.scene.control.SplitPane?>
 
 
-<SplitPane fx:id="fixtureSplitPane" maxWidth="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefWidth="257.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.component.FixtureSplitPaneController" />
+<SplitPane fx:id="fixtureSplitPane" maxWidth="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefWidth="257.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="caa.sportify.controller.component.FixtureSplitPaneController" />

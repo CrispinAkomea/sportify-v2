@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefWidth="217.0" styleClass="anchor-pane" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.component.TeamAccordinController">
+<AnchorPane prefWidth="217.0" styleClass="anchor-pane" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="caa.sportify.controller.component.TeamAccordinController">
    <children>
       <Label layoutX="10.0" layoutY="10.0" text="Teams" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
          <font>

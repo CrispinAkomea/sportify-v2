@@ -3,7 +3,7 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
 
-<SplitPane dividerPositions="0.5" maxWidth="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefWidth="230.0" stylesheets="@../css/leftPane.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportify.controller.LeftPaneController">
+<SplitPane dividerPositions="0.5" maxWidth="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefWidth="230.0" stylesheets="@../css/leftPane.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="caa.sportify.controller.LeftPaneController">
    <items>
       <ScrollPane id="leftPane" hbarPolicy="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="230.0" stylesheets="@../css/leftPane.css">
          <content>
